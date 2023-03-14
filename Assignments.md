@@ -97,7 +97,7 @@ is
 
 # Ex. 4 Car List*
 Create a function called `build_car_list()`.  This function reads from the [input.txt](./input.txt) file and reads from the
-[car-ids.txt](./car-ids.txt) file and builds the followign list:
+[car-ids.txt](./car-ids.txt) file to build a single list of cars (removing the bad mileage data).
 
 Output:
 ```python
