@@ -6,6 +6,7 @@ Assignments are located [here](Assignments.md).
 - Open python-3 directory with IntelliJ
 - Create Python configuration in IntelliJ (select `main.py`)
 - Update [main.py](main.py) with your student ID
+- Install dependencies: `pip install`
 
 # Workflow
 - Write code in your `assignments.py` file in your student directory
