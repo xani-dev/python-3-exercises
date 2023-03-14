@@ -96,7 +96,7 @@ is
 ```
 
 # Ex. 4 Calculator Log S3
-Create a function called calculate() that prompts the user to enter two numbers and returns displays the sum.  When the
+Create a function called `calculate()` that prompts the user to enter two numbers and returns displays the sum.  When the
 user presses 'q' (for quit), the program uploads a file to S3 that contains a log of all the calculations.
 
 Example usage:
@@ -111,7 +111,14 @@ Enter first number: q
 *** Uploaded to S3 ***
 ```
 
-The program uploads a file called `calculator-log.txt` to an S3 bucket.  Append your student id to the file name.
+The program uploads a file called `calculator-log.txt` that contains the log of all the calculations to an S3 bucket.  
+Append your student id to the file name.
+
+File:
+```
+1 + 2 = 3
+2 + 2 = 4
+```
 
 
 # Ex. 5 Car List*
