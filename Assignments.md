@@ -23,7 +23,7 @@ Invalid mileage:  32.13
 
 # Ex. 2 Total Gym Visits
 A gym has a weekly process that creates a CSV file for all the gym members.  The CSV file contains the member name and a
-1 if they have visited the gym, else a 0:
+1 if they have visited the gym, else a 0 for every day of the week:
 
 ```
 Name, S, M, T, W, Th, F, S
