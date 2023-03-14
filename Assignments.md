@@ -12,12 +12,12 @@ Bob, 0, 0, 0, 0, 0, 0, 0
 Charlie, 0, 0, 1, 0, 0, 1, 0
 ```
 
-Create a function called `find_total_visits()` that calculates the total number of visits from the data in the following files:
+Create a function called `find_total_visits()` that calculates the total number of gym visits from the data in the following files:
 - [week-1.csv](week-1.csv)
 - [week-2.csv](week-2.csv)
 - [week-3.csv](week-3.csv)
 
-The function will be consumed in the following manner:
+The function is consumed in the following manner:
 
 ```python
 def ex1():
