@@ -36,6 +36,8 @@ Create a Python function called `count_words()` that accepts the name of an inpu
 large words text file contains words that are three characters or larger.  This function returns the total number of 
 unique words.
 
+This function will parses this [words.txt](./words.txt) file.
+
 ```python
 def ex2():
     total_words = count_words("words.txt")
@@ -47,7 +49,7 @@ Output:
 Total words: 16.
 ```
 
-large-words.txtL
+large-words.txt:
 ```
 extremely
 How
