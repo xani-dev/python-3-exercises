@@ -1,5 +1,10 @@
+import boto3
+from botocore.exceptions import ClientError
 import numpy as np
+from pprint import pprint
 from students.stu0.ValidationException import ValidationException
+
+car_dict = {}
 
 
 def ex1():
@@ -19,14 +24,57 @@ def ex3():
     print(f"Total words: {total_words}.")
 
 
-
-
-
+def ex4():
+    car_list = build_car_list()
+    pprint(car_list)
 
 
 #
 # Your functions here...
 #
+
+def transform_car(m):
+    try:
+        a = m.split(',')
+        int(a[1].strip())
+        retval = {
+            "id": int(a[0].strip()),
+            "model": car_dict[int(a[0].strip())],
+            "miles": int(a[1].strip())
+        }
+    except ValueError:
+        retval = {}  # catches bad mileage data
+    return retval
+
+
+def filter_car(c):
+    if 'miles' in c:
+        return c
+
+
+def build_car_list():
+    miles = []
+    with open("input.txt", "r") as file1:
+        while True:
+            line = file1.readline()
+            if not line:
+                break
+            if "CarId" not in line:
+                miles.append(line.strip())
+
+    with open("car-ids.txt", "r") as file2:
+        while True:
+            line = file2.readline()
+            if not line:
+                break
+            if "CarId" not in line:
+                line_list = line.split(",")
+                car_dict.update({int(line_list[0]): line_list[1].strip()})
+
+    new_list = list(map(transform_car, miles))
+    filtered_list = list(filter(filter_car, new_list))
+    return filtered_list
+
 
 def validate_file(file_name):
     with open(file_name, "r") as file1:
@@ -40,7 +88,6 @@ def validate_file(file_name):
                     n_miles = int(parts[1])
             except ValueError as ve:
                 raise ValidationException(f"Invalid mileage: {parts[1]}")
-
 
 
 def find_total_visits():
@@ -83,3 +130,12 @@ def create_files(file):
 
     return len(large_words) + len(small_words)
 
+    # s3_client = boto3.client('s3')
+    # file = './students/stu0/merged.txt'
+    # bucket_name = 'sia-test-bucket'
+    # key_path = 'merged/stu0/merged.txt'
+    # try:
+    #     response = s3_client.upload_file(file, bucket_name, key_path)
+    #     print(response)  # No news is good news!
+    # except ClientError as e:
+    #     print(e)

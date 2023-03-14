@@ -95,7 +95,28 @@ a
 is
 ```
 
-# Ex. 4 Todo...
+# Ex. 4 Car List*
+Create a function called `build_car_list()`.  This function reads from the [input.txt](./input.txt) file and reads from the
+[car-ids.txt](./car-ids.txt) file and builds the followign list:
+
+Output:
+```python
+[{'id': 1, 'miles': 10111, 'model': 'Ford'},
+ {'id': 2, 'miles': 30333, 'model': 'Chevy'},
+ {'id': 3, 'miles': 40443, 'model': 'Toyota'},
+ {'id': 5, 'miles': 60000, 'model': 'Nissan'}]
+```
+
+It is used in the following manner:
+
+```python
+def ex4():
+    car_list = build_car_list()
+    pprint(car_list)
+```
+
+This is a hard one.
+
 
 
 
