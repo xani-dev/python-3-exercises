@@ -40,7 +40,7 @@ Create a function called `find_total_visits()` that calculates the total number 
 The function is consumed in the following manner:
 
 ```python
-def ex1():
+def ex2():
     total = find_total_visits()
     print(f"Total visits: {total}.")
 ```
@@ -59,7 +59,7 @@ unique words.
 This function parses this [words.txt](./words.txt) file and is used in the following manner:
 
 ```python
-def ex2():
+def ex3():
     total_words = count_words("words.txt")
     print(f"Total words: {total_words}.")
 ```
