@@ -7,10 +7,11 @@ Create a function called `validate_file()` which accepts a name of a file to val
 raises (throws) a `ValidationException` object and is consumed in the following manner:
 
 ```
-try:
-    validate_file("input.txt")
-except ValidationException as ve:
-    print(ve)
+def ex1():
+    try:
+        validate_file("input.txt")
+    except ValidationException as ve:
+        print(ve)
 ```
 
 Output:
