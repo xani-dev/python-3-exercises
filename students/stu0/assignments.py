@@ -1,19 +1,46 @@
 import numpy as np
+from students.stu0.ValidationException import ValidationException
 
 
 def ex1():
+    try:
+        validate_file("input.txt")
+    except ValidationException as ve:
+        print(ve)
+
+
+def ex2():
     total = find_total_visits()
     print(f"Total visits: {total}.")
 
 
-def ex2():
+def ex3():
     total_words = create_files("words.txt")
     print(f"Total words: {total_words}.")
+
+
+
+
+
 
 
 #
 # Your functions here...
 #
+
+def validate_file(file_name):
+    with open(file_name, "r") as file1:
+        while True:
+            line = file1.readline()
+            if not line:
+                break
+            parts = line.split(",")
+            try:
+                if parts[1].strip() != 'Miles':
+                    n_miles = int(parts[1])
+            except ValueError as ve:
+                raise ValidationException(f"Invalid mileage: {parts[1]}")
+
 
 
 def find_total_visits():

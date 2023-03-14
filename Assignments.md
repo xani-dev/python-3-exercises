@@ -1,7 +1,26 @@
 # Python Intro III Assignments
 Submit a PR for each exercise.
 
-# Ex. 1 Total Gym Visits
+# Ex. 1 ValidationException
+Create a function called `validate_file()` which accepts a name of a file to validate.  This function validates the
+[input.txt](./input.txt) file and checks that the mileage for each car is a valid integer number.  This function
+raises (throws) a `ValidationException` object and is consumed in the following manner:
+
+```
+try:
+    validate_file("input.txt")
+except ValidationException as ve:
+    print(ve)
+```
+
+Output:
+```
+Invalid mileage:  32.13
+```
+
+
+
+# Ex. 2 Total Gym Visits
 A gym has a weekly process that creates a CSV file for all the gym members.  The CSV file contains the member name and a
 1 if they have visited the gym, else a 0:
 
@@ -30,7 +49,7 @@ Output:
 Total visits: 21.
 ```
 
-# Ex. 2 Word Counter I/O
+# Ex. 3 Word Counter I/O
 Create a Python function called `count_words()` that accepts the name of an input file.  This function creates two files:
 `large-words.txt` and `small-words.txt`.  The small words text file contains words that have less than 3 characters.  The 
 large words text file contains words that are three characters or larger.  This function returns the total number of 
@@ -74,6 +93,8 @@ in
 a
 is
 ```
+
+# Ex. 4 Todo...
 
 
 
