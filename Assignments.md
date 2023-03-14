@@ -6,7 +6,7 @@ Create a function called `validate_file()` which accepts a name of a file to val
 [input.txt](./input.txt) file and checks that the mileage for each car is a valid integer number.  This function
 raises (throws) a `ValidationException` object and is consumed in the following manner:
 
-```
+```python
 def ex1():
     try:
         validate_file("input.txt")
