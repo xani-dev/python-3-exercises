@@ -95,7 +95,12 @@ a
 is
 ```
 
-# Ex. 4 Car List*
+# Ex. 4 Calculator Log S3
+
+
+
+
+# Ex. 5 Car List*
 Create a function called `build_car_list()`.  This function reads from the [input.txt](./input.txt) file and reads from the
 [car-ids.txt](./car-ids.txt) file to build a single list of cars and removes the bad mileage data.
 
@@ -116,6 +121,8 @@ def ex4():
 ```
 
 *This is a hard one.
+
+
 
 
 

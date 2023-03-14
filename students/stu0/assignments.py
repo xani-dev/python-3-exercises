@@ -1,7 +1,7 @@
 import boto3
-from botocore.exceptions import ClientError
 import numpy as np
 from pprint import pprint
+from botocore.exceptions import ClientError
 from students.stu0.ValidationException import ValidationException
 
 car_dict = {}
@@ -25,6 +25,10 @@ def ex3():
 
 
 def ex4():
+    calculate()
+
+
+def ex5():
     car_list = build_car_list()
     pprint(car_list)
 
@@ -32,6 +36,37 @@ def ex4():
 #
 # Your functions here...
 #
+
+
+def calculate():
+    history = []
+
+    while True:
+        first_num = input("Enter first number: ")
+        if first_num == "q":
+            break;
+        sec_num = input("Enter first number: ")
+        if sec_num == "q":
+            break;
+        total = int(first_num) + int(sec_num)
+        history_line = f"{first_num} + {sec_num} = {total}"
+        history.append(history_line)
+        print(history_line)
+
+    with open("calculator-log.txt", "w") as out_file:
+        for line in history:
+            out_file.writelines(line)
+
+    s3_client = boto3.client('s3')
+    file = 'calculator-log.txt'
+    bucket_name = 'sia-test-bucket'
+    key_path = 'merged/stu0/calculator-log.txt'
+    try:
+        response = s3_client.upload_file(file, bucket_name, key_path)
+    except ClientError as e:
+        print(e)
+    print('*** Uploaded to S3 ***')
+
 
 def transform_car(m):
     try:
