@@ -164,13 +164,3 @@ def create_files(file):
             out_file2.writelines(f"{word}\n")
 
     return len(large_words) + len(small_words)
-
-    # s3_client = boto3.client('s3')
-    # file = './students/stu0/merged.txt'
-    # bucket_name = 'sia-test-bucket'
-    # key_path = 'merged/stu0/merged.txt'
-    # try:
-    #     response = s3_client.upload_file(file, bucket_name, key_path)
-    #     print(response)  # No news is good news!
-    # except ClientError as e:
-    #     print(e)

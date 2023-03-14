@@ -1,7 +1,7 @@
 # Python Intro III Assignments
 Submit a PR for each exercise.
 
-# Ex. 1 ValidationException
+# Ex. 1 Validation Exception
 Create a function called `validate_file()` which accepts a name of a file to validate.  This function validates the
 [input.txt](./input.txt) file and checks that the mileage for each car is a valid integer number.  This function
 raises (throws) a `ValidationException` object and is consumed in the following manner:
@@ -119,6 +119,11 @@ File:
 2 + 2 = 4
 ```
 
+This function is consumed in the following manner:
+```python
+def ex4():
+    calculate()
+```
 
 # Ex. 5 Car List*
 Create a function called `build_car_list()`.  This function reads from the [input.txt](./input.txt) file and reads from the
@@ -135,7 +140,7 @@ Output:
 It is used in the following manner:
 
 ```python
-def ex4():
+def ex5():
     car_list = build_car_list()
     pprint(car_list)
 ```
