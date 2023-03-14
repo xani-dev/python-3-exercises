@@ -19,12 +19,11 @@ Output:
 Invalid mileage:  32.13
 ```
 
-
-
 # Ex. 2 Total Gym Visits
-A gym has a weekly process that creates a CSV file for all the gym members.  The CSV file contains the member name and a
-1 if they have visited the gym, else a 0 for every day of the week:
+A gym has a weekly process that creates a CSV file for all the gym members.  This file indicates if a member has checked
+into the gym for each day of the week.
 
+Example file:
 ```
 Name, S, M, T, W, Th, F, S
 Alice, 1, 1, 0, 0, 1, 0, 1
@@ -32,7 +31,7 @@ Bob, 0, 0, 0, 0, 0, 0, 0
 Charlie, 0, 0, 1, 0, 0, 1, 0
 ```
 
-Create a function called `find_total_visits()` that calculates the total number of gym visits from the data in the following files:
+Create a function called `find_total_visits()` that calculates the total number of gym visits for the data in the following files:
 - [week-1.csv](week-1.csv)
 - [week-2.csv](week-2.csv)
 - [week-3.csv](week-3.csv)
@@ -140,13 +139,4 @@ def ex4():
     car_list = build_car_list()
     pprint(car_list)
 ```
-
 *This is a hard one.
-
-
-
-
-
-
-
-
