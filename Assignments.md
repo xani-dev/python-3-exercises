@@ -34,9 +34,7 @@ Total visits: 21.
 Create a Python function called `count_words()` that accepts the name of an input file.  This function creates two files:
 `large-words.txt` and `small-words.txt`.  The small words text file contains words that have less than 3 characters.  The 
 large words text file contains words that are three characters or larger.  This function returns the total number of 
-unique words.
-
-This function will parses this [words.txt](./words.txt) file.
+unique words. This function parses this [words.txt](./words.txt) file and is used in the following manner:
 
 ```python
 def ex2():
