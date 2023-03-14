@@ -30,7 +30,50 @@ Output:
 Total visits: 21.
 ```
 
-# Ex. 2 Todo...
+# Ex. 2 Word Counter I/O
+Create a Python function called `count_words()` that accepts the name of an input file.  This function creates two files:
+`large-words.txt` and `small-words.txt`.  The small words text file contains words that have less than 3 characters.  The 
+large words text file contains words that are three characters or larger.  This function returns the total number of 
+unique words.
+
+```python
+def ex2():
+    total_words = count_words("words.txt")
+    print(f"Total words: {total_words}.")
+```
+
+Output:
+```
+Total words: 16.
+```
+
+large-words.txtL
+```
+extremely
+How
+second
+This
+many
+the
+are
+line.
+
+words
+this
+file?
+
+test.
+large
+```
+
+small-words.txt:
+```
+in
+a
+is
+```
+
+
 
 
 
