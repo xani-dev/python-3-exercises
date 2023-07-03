@@ -1,5 +1,13 @@
 venv/
 __pycache__/
+.idea/
+.vscode/
+
+files/small-words.txt
+files/large-words.txt
+files/calculator-log.txt
+
+SOLUTIONS/
 
 # Idea
 .idea/workspace.xml
