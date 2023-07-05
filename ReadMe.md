@@ -3,7 +3,7 @@ Assignments are located [here](Assignments.md).
 
 # Getting Started
 1. Create a shared repository, on Github, with your partner
-2. Fork & clone this repo into that shared repository
+2.  Clone this repo into that shared repository
 3. Launch IDE of choice
 4. Open the Python directory
 - Create virtual environment: `python -m venv venv`
