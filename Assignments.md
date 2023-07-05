@@ -1,7 +1,7 @@
 # Python Intro III Assignments
-***Submit a PR for each exercise then switch partners***
+***Submit a PR for each exercise then switch driver/navigator roles***
 The structure of your work is up to you. I suggest creating a new file for each exercise.
-Copy paste the usage into each file and run that individually.
+And then copy paste the usage into each file and run that individually.
 
 # Ex. 1 Validation Exception
 Create a function called `validate_file()` which accepts a name of a file to validate.  This function validates the
