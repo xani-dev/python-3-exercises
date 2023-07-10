@@ -1,10 +1,9 @@
 import csv
-import os
 
 
 def find_total_visits():
    #Reading from each file: 
-    files = ["../files/week-1.csv", "../files/week-2.csv", "../files/week-3.csv"]
+    files = [f"../files/week-1.csv", f"../files/week-2.csv", f"../files/week-3.csv"]
     
     #Initializing Number of visits to Zero
     total_visits = 0
@@ -18,6 +17,8 @@ def find_total_visits():
             
             #Reading line by line on each csv
             rows = csv.reader(file, delimiter=',')
+            # reader =  csv.DictReader(file)
+            # print(reader)
             for row in rows:
                 print(row)
                 for value in row[1:]:
